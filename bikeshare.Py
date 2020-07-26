@@ -21,7 +21,7 @@ def get_filters():
 You can choose one of Chicago, New York City or Washington. \n\
 \nPlease enter the name with no capital letters: ")
     while city not in ['chicago', 'new york city', 'washington']:
-        city = input("\nOops, there was a problem with your input! Please re-enter the city name\
+        city = input("\nOops, there was a problem with your input! Please re-enter the city name \
 but make sure to choose from the options provided above and do not use capital letters: ")
     # get user input for month (all, january, february, ... , june)
     month = input("\nWhich Month would you like to view data for? \
