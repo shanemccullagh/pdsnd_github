@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+26/07/2020
 
 ### Project Title
-Replace the Project Title
+US Bikeshare Data Tool
 
 ### Description
-Describe what your project is about and what it does
+I have used Python to build an interactive environment to help users understand bikeshare data from three US cities. Users can choose and filter data and then use this data to calculate useful summary statistics.
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+This project is part of the 'Programming for Data Science with Python Nanodegree' run by Udacity. For more information on this course visit https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
