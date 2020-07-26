@@ -58,7 +58,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
 
-    # load data file into a dataframe
+    # load data file into a dataframe named 'df'
     df = pd.read_csv(CITY_DATA.get(city))
 
     df['date'] = pd.to_datetime(df['Start Time'])
@@ -91,16 +91,16 @@ def time_stats(df):
 
     start_time = time.time()
 
-    # display the most common month
+    # display the most common month in the terminal
     month_name = ['January', 'February', 'March', 'April', 'May', 'June'][df['month'].mode()[0]-1]
 
     print('The most common month was {}.\n'.format(month_name))
 
-    # display the most common day of week
+    # display the most common day of week in the terminal
     day_name = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][df['day_of_week'].mode()[0]-1]
     print('The most common day of the week was {}.\n'.format(day_name))
 
-    # display the most common start hour
+    # display the most common start hour in the terminal
 
     df['hour'] = df['date'].dt.hour
     print('The most common starting hour was {}.\n'.format(df['hour'].mode()[0]))
@@ -115,19 +115,19 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # display most commonly used start station
+    # display most commonly used start station in the terminal
 
     print('The most common station to start a journey was {}.\n'.format(df['Start Station'].mode()[0]))
 
-    # display most commonly used end station
+    # display most commonly used end station in the terminal
 
     print('The most common station to end a journey was {}.\n'.format(df['End Station'].mode()[0]))
 
-    # Add a new column to data fram with the start and end station for each journey
+    # Add a new column to data frame 'df' with the start and end station for each journey
 
     df['Full Journey'] = df['Start Station'] + ' to ' + df['End Station']
 
-    # display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip in the terminal
 
     print('The most common journey combination was {}.\n'.format(df['Full Journey'].mode()[0]))
 
@@ -141,11 +141,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # display total travel time
+    # display total travel time in the terminal
 
     print('The total travel time was {} days\n'.format(df['Trip Duration'].sum()/(24*60**2)))
 
-    # display mean travel time
+    # display mean travel time in the terminal
 
     print('The average travel time was {} minutes\n'.format(df['Trip Duration'].mean()/60))
 
@@ -169,19 +169,19 @@ def user_stats(df,city):
 If you are interested, this information is held for Chicago and New York City.')
 
     else:
-        # Display counts of user types
+        # Display counts of user types in the terminal
         subscribers = df['User Type'].value_counts()['Subscriber']
         customers = df['User Type'].value_counts()['Customer']
         print('There were {} subscribers and {} customers.\n'.format(subscribers, customers))
 
-        # Display counts of gender
+        # Display counts of gender in the terminal
 
         males = df['Gender'].value_counts()['Male']
         females = df['Gender'].value_counts()['Female']
         print('There were {} males and {} females.\n'.format(males, females))
 
 
-        # Display earliest, most recent, and most common year of birth
+        # Display earliest, most recent, and most common year of birth in the terminal
         max_year = int(df['Birth Year'].max())
         min_year = int(df['Birth Year'].min())
         mode_year = int(df['Birth Year'].mode(dropna=True)[0])
