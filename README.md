@@ -14,4 +14,5 @@ washington.csv
 new_york_city.csv
 
 ### Credits
-This project is part of the 'Programming for Data Science with Python Nanodegree' run by Udacity. For more information on this course visit https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
+This is the second project from the 'Programming for Data Science with Python Nanodegree' run by Udacity. For more information on this course visit https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104.
+The raw data in the csv files I have used was provided by Udacity. The ideas for the project was also provided by Udacity.
